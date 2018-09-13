@@ -1,4 +1,4 @@
-// Copyright © 2018 tingold
+// Copyright © 2018 Boundless
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -36,9 +36,6 @@ var rootCmd = &cobra.Command{
 	Use:   "coj",
 	Short: "Cloud Optimized GeoJson utility",
 	Long: `A utility for converting geojson into a cloud optimized version`,
-	// Uncomment the following line if your bare application
-	// has an action associated with it:
-	//	Run: func(cmd *cobra.Command, args []string) { },
 }
 
 
@@ -52,9 +49,6 @@ func Execute() {
 func init() {
 	cobra.OnInitialize(initConfig)
 
-	// Here you will define your flags and configuration settings.
-	// Cobra supports persistent flags, which, if defined here,
-	// will be global for your application.
 	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.coj.yaml)")
 
 	// Cobra also supports local flags, which will only run
